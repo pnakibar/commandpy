@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Padrão Command by pnakibar</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Padrão Command</h1>
+        <p>Padrão Command em Python</p>
+
+        <p class="view"><a href="https://github.com/pnakibar/commandpy">View the Project on GitHub <small>pnakibar/commandpy</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/pnakibar/commandpy/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/pnakibar/commandpy/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/pnakibar/commandpy">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
+<a name="objetivo" class="anchor" href="#objetivo"><span class="octicon octicon-link"></span></a>Objetivo</h3>
+
+<ul>
+<li>Encapsula um pedido como um objeto, tornando possível a parametrização de clientes com diferentes pedidos, filas e dá suporte a operações que não são possíveis de serem realizadas</li>
+<li>Promove a "invocação de um metódo em um objeto"</li>
+<li><em>Um Callback orientado a objeto</em></li>
+</ul><h3>
+<a name="problema" class="anchor" href="#problema"><span class="octicon octicon-link"></span></a>Problema</h3>
+
+<p>Necessidade de enviar pedidos aos objetos sem conhecer nada da operação sendo requisitada ou do receptor da requisição.</p>
+
+<h3>
+<a name="solu%C3%A7%C3%A3o-e-estrutura" class="anchor" href="#solu%C3%A7%C3%A3o-e-estrutura"><span class="octicon octicon-link"></span></a>Solução e Estrutura</h3>
+
+<p>O <em>client</em> que cria o comando não é o <em>client</em> mesmo que o executa. Essa sepração promove uma maior flexibilidade no timing e no sequenciamento de comandos. A materialização de comandos significa que eles devem ser manipulados como um outro objeto qualquer.
+<img src="http://sourcemaking.com/files/v2/content/patterns/Command-2x.png" alt="">
+Os objetos do tipo <em>command</em> podem ser pensados como <em>tokens</em> que são criados por um <em>client</em> que sabe o quê precisa ser feito e então é passado para outro <em>client</em> que tem recursos para fazê-lo.</p>
+
+<h3>
+<a name="exemplo" class="anchor" href="#exemplo"><span class="octicon octicon-link"></span></a>Exemplo</h3>
+
+<p><img src="http://sourcemaking.com/files/v2/content/patterns/Command_example1-2x.png" alt=""></p>
+
+<h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>Autores <a href="https://github.com/pnakibar" class="user-mention">@pnakibar</a> e <a href="https://github.com/rikes" class="user-mention">@rikes</a>
+Adaptado de <a href="http://sourcemaking.com/">http://sourcemaking.com/</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/pnakibar">pnakibar</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
